@@ -81,16 +81,24 @@ header .textos-header{
 .textos-header h1{
     font-size: 50px;
     color: #fff;
+    text-shadow: -10px 10px 10px#414141;
+
 }
 
 .textos-header h2{
     font-size: 30px;
     font-weight: 800;
+    color: #ffbf75;
+    text-shadow: -10px 10px 10px#414141;
 }
 .logo {
     width: 70px;
     height: 40px;
     filter: saturate(0) brightness(10);
+    /* border-left: 3px solid rgb(255, 208, 0) ; */
+    border-left: 3px solid white;
+    border-radius: 50%;
+    box-shadow: -5px 5px 5px#414141;
 }
 .wave{
     position: absolute;
@@ -142,18 +150,23 @@ header .textos-header{
 }
 .fotoPrincipal img{
     max-width: 40%;
+    border-radius: 10px
 }
 .fotosPropiedad{
     flex: 1;
     position: relative;
+
 }
 .fotosPropiedad img{
     height: 200px;
+    border-radius: 10px
+
 }
 .fotosPropiedad img:hover{
     margin-left: 20px;
     transform: scale(200%);
     border: 2px solid white;
+    box-shadow: -10px 10px 10px rgba(65, 65, 65, 0.5);
 }
 .textoPropiedad{
     line-height: 30px;
