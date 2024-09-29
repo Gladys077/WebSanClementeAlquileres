@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
 
+:root {
+    --color-primary: #079af6;
+    --color-secondary: #ffd7a6;
+    --color-text: #333;
+    --color-background: #f4f4f4;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -12,13 +19,13 @@ body {
 
 .contenedor{
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
 }
 
 .titulo{
-    color:#079af6;
+    color:var(--color-primary);
     font-size: 30px;
     text-align: center;
     margin-top: 10px;
@@ -34,7 +41,7 @@ header{
     height: 600px;
     background: #00c3ff;  
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgba(255, 255, 28, 0.8), rgba(0, 195, 255, 0.8)), url(../img/portada.jpg);  
+    /* background: -webkit-linear-gradient(to right, rgba(255, 255, 28, 0.8), rgba(0, 195, 255, 0.8)), url(../img/portada.jpg);   */
     /* Chrome 10-25, Safari 5.1-6 */
     background: url(../img/SanCle.jpg); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -43,23 +50,26 @@ header{
     position: relative;
 }
 
-nav{
-    text-align: right;
-    padding: 30px 50px 0 0;
-    width: 1005;
+/* nav{
     position: fixed;
-    display: block;
     top: 0;
     right: 0;
-    background: royalblue;
+    left: 0;
+    padding: 1rem;
+    background: rgba(37, 119, 185, 0.7);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 nav > a{
     color: #fff;
     font-weight: 400;
     text-decoration: none;
-    margin-right: 15px;
+    margin-right: 35px;
     font-size: 20px;
     letter-spacing: .5px;
 }
@@ -68,6 +78,40 @@ nav > a:hover {
     background-color: #f9d09fdf;
     padding: 6px;
     color: black;
+} */
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(69, 59, 46, 0.5);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    /* font-weight: bold; */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-secondary);
+    font-weight: 600;
 }
 
 header .textos-header{
@@ -152,8 +196,6 @@ header .textos-header{
         "imgMain imgMain info info info"
         "img     img     img  img  img"
         "img img img img img"
-        
-
 }
 .fotoPrincipal {
     /* display: flex;
@@ -162,12 +204,10 @@ header .textos-header{
     margin-bottom: 10px;
     width: 100%;
     grid-area: imgMain;
-
 }
 .fotoPrincipal img{
     max-width: 40%;
     border-radius: 10px;
-
 }
 .fotosPropiedad{
     flex: 1;

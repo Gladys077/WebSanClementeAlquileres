@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Clemente Alquileres</title>
-
     <link rel="icon" href="img/Playa.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
+
 </head>
 
 
 <body>
     <header>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Departamentos</a>
-            <a href="#">Duplex</a>
-            <a href="#">Atracciones</a>
-            <a href="#">Contacto</a>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#departamentos">Departamentos</a></li>
+                <li><a href="#duplexs">Duplex</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#atracciones">Atracciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
         <section class="textos-header">
-            <h2>Alquileres temporarios en</h2>
             <h1>San Clemente  <img src="img/iconos/LogoOlas.png" alt="huellas" class="logo"> Alquileres</h1>
+            <h2>Tu hogar lejos de casa</h2>
         </section>
 
         <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -41,6 +44,66 @@
                     <img class="iconoPropiedad" src="img/iconos/edificio.png" alt="dpto">
                     Departamentos
                 </h1>
+
+                <!-- Propiedad 1 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/R1/05-vista.jpg" alt="Vista al mar"></div>
+                                <div class="swiper-slide"><img src="img/R1/01-frente.jpg" alt="Frente de Edificio"></div>
+                                <div class="swiper-slide"><img src="img/R1/02-comedor.jpg" alt="Comedor"></div>
+                                <div class="swiper-slide"><img src="img/R1/03-living.jpg" alt="Living"></div>
+                                <div class="swiper-slide"><img src="img/R1/04-cocina.jpg" alt="Cocina"></div>
+                                <div class="swiper-slide"><img src="img/R1/06-dormitorio.jpg" alt="Dormitorio"></div>
+                                <div class="swiper-slide"><img src="img/R1/07.a.jpg" alt="baño"></div>
+                                <div class="swiper-slide"><img src="img/R1/07.b.jpg" alt="ducha/bidet"></div>
+                                <div class="swiper-slide"><img src="img/R1/07.c.jpg" alt="ducha"></div>
+                                <div class="swiper-slide"><img src="img/R1/08-balcon.jpg" alt="Balcón"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">Departamento de 2 ambientes con vista al mar</h3>
+                        <div class="property-details">
+                            <span class="property-detail"><i class="fas fa-map-marker-alt"></i> Av. Costanera 2525, 4° C</span>
+                            <span class="property-detail"><i class="fas fa-bed"></i> 2 habitaciones</span>
+                            <span class="property-detail"><i class="fas fa-tv"></i> TV Cable</span>
+                            <span class="property-detail"><i class="fas fa-fire"></i> Calefacción</span>
+                        </div>
+                        <button class="btn" onclick="openModal('modal1')">Ver más detalles</button>
+                    </div>
+                </div>
+
+                <!-- Modal para Propiedad 1 -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <h2>Departamento de 2 ambientes con vista al mar</h2>
+                        <p><strong>Ubicación:</strong> Av. Costanera 2525, 4° C. Edificio Riazor 1</p>
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Vista al mar</li>
+                            <li>TV Cable</li>
+                            <li>Gas natural</li>
+                            <li>Calefacción</li>
+                            <li>Ventiladores de techo</li>
+                            <li>WiFi prepago (a cargo del inquilino)</li>
+                        </ul>
+                        <p><strong>Descripción:</strong> Hermoso departamento ubicado en la zona centro, entre calles 18 y 19. A pasos de la playa. Cuenta con un dormitorio con cama matrimonial, placard, frazadas y almohadas. La cocina está bien equipada, con heladera con freezer y microondas. El living-comedor tiene mesa, sillas y un diván con carro-cama (dos camas de 1 plaza).</p>
+                    </div>
+                </div>
+
+                <!-- Repite este bloque para las otras propiedades -->
+
+
+
+
+
+
                 <div class="galeria-port">
                     <div class="imagen-port">
                         <div class="fotoPrincipal">
@@ -101,6 +164,10 @@
 
                         </div>
                     </div>
+
+
+
+                    
                     <!-- propiedad 2 -->
                     <div class="imagen-port">
                         <div class="fotoPrincipal">
@@ -450,6 +517,50 @@
 
         <h2 class="titulo-final">&copy; San Clemente Alquileres</h2>
     </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        // Inicializar Swiper
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Funciones para abrir y cerrar modales
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+
+        // Scroll suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
