@@ -17,11 +17,11 @@ body {
     font-family: 'open sans';
 }
 
-.contenedor{
+.container{
     width: 90%;
     max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
+    /* overflow: hidden; */
 }
 
 .titulo{
@@ -39,48 +39,12 @@ body {
 header{
     width: 100%;
     height: 600px;
-    background: #00c3ff;  
-    /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, rgba(255, 255, 28, 0.8), rgba(0, 195, 255, 0.8)), url(../img/portada.jpg);   */
-    /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--color-primary);  
     background: url(../img/SanCle.jpg); 
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size:cover;
     background-attachment: fixed;
     position: relative;
 }
-
-/* nav{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 1rem;
-    background: rgba(37, 119, 185, 0.7);
-    z-index: 1000;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-nav > a{
-    color: #fff;
-    font-weight: 400;
-    text-decoration: none;
-    margin-right: 35px;
-    font-size: 20px;
-    letter-spacing: .5px;
-}
-
-nav > a:hover {
-    background-color: #f9d09fdf;
-    padding: 6px;
-    color: black;
-} */
-
-
 
 nav {
     position: fixed;
@@ -88,31 +52,37 @@ nav {
     left: 0;
     right: 0;
     padding: 1rem;
-    background-color: rgba(69, 59, 46, 0.5);
+    background-color: rgba(4, 40, 139, 0.5);
     z-index: 1000;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+                /* font-weight: bold; */
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--color-secondary);
+                    font-weight: 600;
+                }
+            }
+            
+            
+        }
+    }
+    
+    
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
 
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    /* font-weight: bold; */
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--color-secondary);
-    font-weight: 600;
-}
 
 header .textos-header{
     display: flex;
@@ -165,15 +135,16 @@ header .textos-header{
     border-radius: 50%;
     padding: 5px
 }
-.galeria-port{
-    display: grid;
+/* .galeria-port{
+    display: grid; */
     /* flex-direction: column;
     align-items: center;
     justify-content: space-evenly; */
-    flex-wrap: wrap; /*evita que las imagenes se superpongan dentro del mismo espacio*/
-}
+    /*evita que las imagenes se superpongan dentro del mismo espacio*/
+    /* flex-wrap: wrap; 
+} */
 
-.imagen-port {
+/* .imagen-port {
     width: 98%;
     height: 500px;
     overflow: hidden;
@@ -182,13 +153,13 @@ header .textos-header{
     box-shadow: 10px 0px 10px 10px rgba(154, 153, 153, 0.2);
     border-radius: 10px;
     margin-bottom: 50px;
-    padding: 20px;
+    padding: 20px; */
 
     /* display: flex;
     flex-direction: column;
     flex: 1; */
 
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr;
     gap: 10px;
@@ -196,12 +167,12 @@ header .textos-header{
         "imgMain imgMain info info info"
         "img     img     img  img  img"
         "img img img img img"
-}
-.fotoPrincipal {
+} */
+/* .fotoPrincipal { */
     /* display: flex;
     flex-direction: row;
     gap: 10px; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px;
     width: 100%;
     grid-area: imgMain;
 }
@@ -213,8 +184,8 @@ header .textos-header{
     flex: 1;
     position: relative;
 
-}
-.fotosPropiedad img{
+} */
+/* .fotosPropiedad img{
     height: 200px;
     border-radius: 10px;
     grid-area: img;
@@ -249,7 +220,7 @@ header .textos-header{
     margin-right: 5px;
     /* grid-column: 2; */
 
-}
+/* }  */
 
 /*
 .hover-galeria{
@@ -590,3 +561,6 @@ footer{
         font-size: 20px;
     }
 }
+
+
+
