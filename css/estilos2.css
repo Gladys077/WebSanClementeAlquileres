@@ -76,26 +76,28 @@ header {
         text-align: center;
 
         h1{
+            display: flex;
+            align-items: center;
             font-size: 45px;
             color: #fff;
             text-shadow: -5px 5px 5px#414141;
-        }
-        
-        h2{
-            font-size: 30px;
-            font-weight: 800;
-            color: #ffbf75;
-            text-shadow: -10px 10px 10px#414141;
         }
 
         .logo {
             width: 70px;
             height: 40px;
+            margin: 0 10px;
             filter: saturate(0) brightness(10);
-            /* border-left: 3px solid rgb(255, 208, 0) ; */
             border-left: 3px solid white;
             border-radius: 50%;
             box-shadow: -5px 5px 5px#414141;
+        }
+
+        h2{
+            font-size: 30px;
+            font-weight: 800;
+            color: #ffbf75;
+            text-shadow: -10px 10px 10px#414141;
         }
     }
     
@@ -108,7 +110,79 @@ header {
 }
 
 /* Main - Section Properties */
+.carousel-container {
+    position: relative;
+    width: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.carousel-slide {
+    width: 100%; 
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    /* text-align: center;
+        font-size: 18px;*/
+        background: #fff;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.carousel-slide img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    max-height: 300px; 
+    display:block;
+
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(14, 111, 236, 0.5);
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 40px;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 25px;
+        height: 25px;
+        filter: invert(1);
+    }
+}
+.carousel-button-left { left: 10px; }
+.carousel-button-right { right: 10px; }
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+
+}
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+.carousel-indicator.active {
+    background-color: white;
+}
 .properties {
     padding: 4rem 0;
     .container {
@@ -151,48 +225,6 @@ header {
             .property-image {
                 height: 300px;
                 position: relative;
-        
-    /* Estilos básicos para el contenedor Swiper */
-    .swiper {
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-    }
-    
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-    
-        /* Center slide text vertically */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .swiper-slide img {
-        width: auto;
-        height: auto;
-        max-height: 400px;
-    }
-    
-    /* Ajusta las flechas */
-    .swiper-button-next, .swiper-button-prev {
-        color: blue;
-    }
-    
-    
-    
-                /* .swiper {
-                    width: auto;
-                    height: 100%;
-            
-                    .swiper-slide img {
-                        width: auto;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                } */
             }
             .property-info {
                 padding: 1.5rem;
@@ -293,9 +325,8 @@ header {
 /* clientes */
 .clientes {
     background: #f2f2f2; 
-    padding: 2%;
+    padding: 4rem 2rem;
     margin-bottom: 24px;
-    padding-top: 4rem;
 
     .titulo {
         text-align: center;
@@ -361,7 +392,6 @@ header {
         margin-bottom: 16px;
     }
     .contenido-textos{
-
         p{
             padding: 0px 0px 10px 15px;
             font-weight: 400;
@@ -379,14 +409,8 @@ header {
 .atracciones {
     background: #f2f2f2; 
     padding: 2%;
-    /* margin-bottom: 24px; */
     padding-top: 4rem;
     padding-bottom: 3rem;
-
-    /* padding-bottom: 30px;
-    line-height: 1.5em;
-    font-weight: 400; */
-
 
     .titulo{
         text-align: center;
@@ -406,6 +430,7 @@ header {
     .atracciones-ind{
         display: flex;
         width: 30%;
+        min-width: 300px;
         height: auto;
         flex-direction: column;
         align-items: center;
@@ -480,9 +505,28 @@ footer{
 @media screen and (max-width: 900px){
     header{
         background-position: center;
+        
+        .textos-header{
+            
+            h1{
+                display: flex;
+                flex-direction: column;
+                font-size: 30px;
+            }
+            h2{
+                font-size: 16px;
+                color: wheat;
+                font-style: italic;
+            }
+            .logo{
+                width: 22%;
+                height: 22%; 
+                margin: 8px auto;
+            }
+        }
     }
 
-    .contenedor-sobre-nosotros{
+    .sobre-nosotros{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -496,7 +540,6 @@ footer{
         text-align: center;
     }
     .contenido-textos h3{
-        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -507,9 +550,8 @@ footer{
     }
 
     /* Galeria */
-    .imagen-port {
-        width: 44%;;
-    }
+    
+
 
     /* Clientes */
     .cards{
