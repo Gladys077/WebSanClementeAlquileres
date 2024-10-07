@@ -62,9 +62,10 @@
                                 <div class="carousel-slide"><img src="img/R1/03-living.jpg" alt="Living"></div>
                                 <div class="carousel-slide"><img src="img/R1/04-cocina.jpg" alt="Cocina"></div>
                                 <div class="carousel-slide"><img src="img/R1/06-dormitorio.jpg" alt="Dormitorio"></div>
+                                <div class="carousel-slide"><img src="img/R1/vistadesdecocina.jpg" alt="Balcón"></div>
+
                                 <div class="carousel-slide"><img src="img/R1/07.a.jpg" alt="Baño"></div>
                                 <div class="carousel-slide"><img src="img/R1/07.b.jpg" alt="Ducha/bidet"></div>
-                                <div class="carousel-slide"><img src="img/R1/08-balcon.jpg" alt="Balcón"></div>
                             </div>
                             <div class="carousel-button carousel-button-left"><img src="/img/iconos/flechaIzquierda.png" alt="Flecha izquierda"></div>
                             <div class="carousel-button carousel-button-right"><img src="/img/iconos/flechaDerecha.png" alt="Flecha derecha"></div>
@@ -492,11 +493,38 @@ function initializeCarousel(carouselContainer) {
     updateCarousel();
 }
 
-// Initialize all carousels
-document.addEventListener('DOMContentLoaded', () => {
-    const carousels = document.querySelectorAll('.carousel-container');
-    carousels.forEach(initializeCarousel);
-});
+        // Initialize all carousels
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.carousel-container');
+            carousels.forEach(initializeCarousel);
+        });
+
+        // Funciones para abrir y cerrar modales
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+
+        // Scroll suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 

@@ -294,14 +294,22 @@ header {
             width: 80%;
             max-width: 600px;
             border-radius: 10px;
-    
+            position: static;
+            h2{
+                font-size: 22px;
+            }
             li{
                 margin-left: 18px;
+            }
+            p{
+                margin-top: 10px;
             }
     
             .close {
                 color: #aaa;
                 float: right;
+                margin-top: -20px;
+                margin-right: -10px;
                 font-size: 28px;
                 font-weight: bold;
                 cursor: pointer;
@@ -618,9 +626,7 @@ footer{
     }
 
     /* galeria */
-    .imagen-port{
-        width: 95%;
-    }
+   
 
     /* clientes */
     .cards .card{
@@ -644,6 +650,7 @@ footer{
     .content-foo{
         margin-bottom: 20px;
         text-align: center;
+
     }
 
     .content-foo h4{
@@ -663,3 +670,9 @@ footer{
 
 
 
+@media screen and (max-width:300px) {
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+}
