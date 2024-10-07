@@ -225,6 +225,12 @@ header {
             .property-image {
                 height: 300px;
                 position: relative;
+                h5{
+                    margin-top: -15px;
+                    margin-left: 20px;
+                    color: #696868;
+                    text-align: center;
+                }
             }
             .property-info {
                 padding: 1.5rem;
@@ -308,9 +314,9 @@ header {
             .close {
                 color: #aaa;
                 float: right;
-                margin-top: -20px;
+                margin-top: -24px;
                 margin-right: -10px;
-                font-size: 28px;
+                font-size: 36px;
                 font-weight: bold;
                 cursor: pointer;
         
