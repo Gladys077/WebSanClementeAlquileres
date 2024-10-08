@@ -345,6 +345,7 @@ header {
             }
             p{
                 margin-top: 10px;
+                strong{margin-right: 6px;}
             }
     
             .close {
