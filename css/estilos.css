@@ -525,13 +525,15 @@ footer{
     justify-content: space-between;
     margin: auto;
     padding-bottom: 20px;
+    
     border-bottom: 1px solid #ccc;
 }
 .content-foo{
     text-align: center;
     display: flex;
     flex-direction: row;
-    margin: 0 auto}
+    margin: 0 auto;
+}
 
 .content-foo h4{
     color: #fff;
@@ -548,6 +550,7 @@ footer{
     font-size: 16px;
     margin: 20px 0 0 0;
     color: #ccc;
+
 }
 
 @media screen and (max-width: 900px){
@@ -676,11 +679,16 @@ footer{
     .contenedor-footer{
         flex-direction: column;
         border: none;
+        border-bottom: 1px solid #f2f2f2;
+
     }
 
     .content-foo{
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         text-align: center;
+        flex-direction: column;
+        /* border-bottom: 1px solid #f2f2f2; */
+
     }
 
     .content-foo h4{
@@ -689,7 +697,7 @@ footer{
 
     .content-foo p{
         color: #ccc;
-        border-bottom: 1px solid #f2f2f2;
+        /* border-bottom: 1px solid #f2f2f2; */
         padding-bottom: 20px;
     }
 
@@ -703,5 +711,7 @@ footer{
     .contenedor-footer{
         flex-direction: column;
         border: none;
+        border-bottom: 1px solid #f2f2f2;
+
     }
 }
