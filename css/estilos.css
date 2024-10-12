@@ -111,9 +111,9 @@ header {
         height: 370px;
         width: 100%;
         align-items: center;
-        justify-content: center;
+        padding-top: 120px;
         flex-direction: column;
-        text-align: center;
+        /* text-align: center; */
 
         h1{
             display: flex;
@@ -134,10 +134,11 @@ header {
         }
 
         h2{
-            font-size: 30px;
+            font-size: 28px;
             font-weight: 800;
-            color: #ffbf75;
-            text-shadow: -10px 10px 10px#414141;
+            color: var(--color-secondary);
+            text-shadow: -5px 5px 5px#414141;
+            margin-top: 10px;
         }
     }
     
@@ -567,7 +568,6 @@ footer{
             justify-content: center;
             margin-right: 5px;
             align-content: center;
-
         }
         
         .textos-header{
@@ -575,17 +575,17 @@ footer{
             h1{
                 display: flex;
                 flex-direction: column;
-                font-size: 30px;
+                font-size: 29px;
             }
             h2{
                 font-size: 16px;
-                color: wheat;
+                color: var(--color-secondary);
                 font-style: italic;
             }
             .logo{
-                width: 22%;
-                height: 22%; 
-                margin: 8px auto;
+                width: 60px;
+                height: 30px; 
+                margin: 8px;
             }
         }
     }
@@ -642,8 +642,8 @@ footer{
         margin-right: 5px;
     }
 
-    .textos-header h2{
-        font-size: 35px ;
+    .textos-header {
+        font-size: 32px ;
     }
 
     .textos-header p {
@@ -702,7 +702,7 @@ footer{
     }
 
     .titulo-final{
-        font-size: 20px;
+        font-size: 14px;
     }
 }
 
@@ -713,5 +713,8 @@ footer{
         border: none;
         border-bottom: 1px solid #f2f2f2;
 
+    }
+    .titulo-final{
+        font-size: 12px;
     }
 }
