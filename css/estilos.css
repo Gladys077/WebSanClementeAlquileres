@@ -693,6 +693,7 @@ footer{
 
     .content-foo h4{
         border: none;
+        font-size: 90%;
     }
 
     .content-foo p{
