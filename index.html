@@ -458,6 +458,8 @@
             </div>
         </div>
         <h2 class="titulo-final">&copy; San Clemente Alquileres</h2>
+        <div id="contador">Visitas: <span id="visitas"></span></div>
+
     </footer> 
 
 
@@ -572,7 +574,14 @@ function initializeCarousel(carouselContainer) {
             });
         });
 
-
+        // Llamamos a la función de Netlify para obtener el contador de visitas
+        fetch('/.netlify/functions/visitas')
+          .then(response => response.json())
+          .then(data => {
+            // Mostramos el número de visitas en la página
+            document.getElementById('visitas').textContent = data.visitas;
+          })
+          .catch(error => console.error('Error:', error));
     
     </script>
 </body>
