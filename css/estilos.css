@@ -535,12 +535,13 @@ footer{
 
 .content-foo h4{
     color: #fff;
-    padding-bottom: 5px;
+    padding-bottom: 12px;
     padding-right: 10px;
 }
-.content-foo p{
+.content-foo a{
     color: #f2f2f2;
     font-size: 18px;
+    text-underline-offset: 3px;
 }
 
 .titulo-final{
@@ -692,7 +693,7 @@ footer{
         font-size: 90%;
     }
 
-    .content-foo p{
+    .content-foo a{
         color: #ccc;
         padding-bottom: 20px;
     }
