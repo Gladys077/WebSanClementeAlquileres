@@ -24,7 +24,7 @@ body {
 header {
     height: 110vh;
     background: var(--color-primary);  
-    background: url(../img/SanCle.jpg); 
+    background: url(../img/SanCle.webp); 
     background-size:cover;
     background-attachment: fixed;
     position: relative;
