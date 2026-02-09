@@ -16,6 +16,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: white;
 }
 
 /* Header */
@@ -27,14 +28,14 @@ body {
   object-fit: cover;
   top: 50px;
   left: 0;
-  z-index: -1;
+  z-index: -2;
 }
 header {
   height: 110vh;
   overflow: hidden;
   position: relative;
   background-color: rgba(230, 234, 246, 0.7);
-  z-index: -1;
+  z-index: 10;
 
   nav {
     position: fixed;
@@ -42,8 +43,8 @@ header {
     left: 0;
     right: 0;
     padding: 1rem;
-    background-color: rgba(4, 40, 139, 0.7);
-    z-index: 1000;
+    background-color: rgba(4, 40, 139, 0.9);
+    z-index: 10;
   }
 
   .nav-links {
@@ -80,11 +81,13 @@ header {
     filter: invert(1);
   }
 
-  @media (min-width: 1024px) {
+  /* @media (min-width: 1024px) {
     .hero-img {
       position: fixed;
+
+      z-index: -2;
     }
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     .nav-links {
@@ -94,7 +97,7 @@ header {
       top: 32px;
       left: 0;
       right: 0;
-      background-color: rgba(4, 40, 139, 0.9);
+      background-color: rgba(4, 40, 139, 0.95);
       padding: 20px;
       height: 100vh;
     }
@@ -445,7 +448,6 @@ header {
   max-width: 900px;
   margin: 0 auto;
   padding: 3.5rem;
-  background-color: rgba(245, 245, 245, 0.725);
 
   .titulo {
     text-align: center;
