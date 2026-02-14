@@ -5,7 +5,7 @@
   --color-background: #f4f4f4;
   --color-card1: #440686;
   --color-card2: #1f3fbc;
-  --color-btn: #3852e7;
+  --color-btn: #1c35c2;
 }
 
 * {
@@ -170,10 +170,10 @@ h5 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(14, 111, 236, 0.5);
+  background: rgba(14, 111, 236, 0.7);
   border: none;
   border-radius: 50%;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
   font-size: 40px;
   display: flex;
@@ -271,13 +271,6 @@ h5 {
   position: relative;
 }
 
-/* .property-image h5 {
-  margin-top: -15px;
-  margin-left: 20px;
-  color: #696868;
-  text-align: center;
-} */
-
 .property-info {
   padding: 2rem;
   margin-top: 10px;
@@ -308,7 +301,7 @@ h5 {
 
 .btn {
   display: inline-block;
-  background-color: var(--color-primary);
+  background-color: var(--color-btn);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -421,27 +414,6 @@ h5 {
 .review-card span {
   font-size: 14px;
   color: #666;
-}
-
-.cta-section {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.btn-whatsapp {
-  display: inline-block;
-  background-color: #25d366;
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 8px;
-  margin-bottom: 20px;
-}
-
-.btn-whatsapp:hover {
-  background-color: #1ebe5d;
 }
 
 /* ------MINI GUIA---- */
@@ -620,15 +592,20 @@ h5 {
   margin-bottom: 20px;
 }
 
+.cta-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
 .btn-whatsapp {
   display: inline-block;
-  background-color: #25d366;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 6px;
+  background-color: #0b7f36;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 .btn-whatsapp:hover {
