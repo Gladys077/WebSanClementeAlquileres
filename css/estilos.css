@@ -152,7 +152,7 @@ h5 {
 .carousel-slide {
   width: 100%;
   flex: 0 0 100%;
-  background: #fff;
+  /* background: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,6 +215,92 @@ h5 {
 
 .carousel-indicator.active {
   background-color: white;
+}
+
+/* ---- Modificador: carrousel de RESEÑAS (contenido de texto) ----
+   Los carrousels de fotos de arriba quedan intactos (botón celeste
+   sobre la imagen, que ahí se ve bien). Para reseñas necesitamos:
+   1) padding lateral para que el texto nunca quede debajo de las
+      flechas (antes las tapaba)
+   2) flechas en SVG, blancas en vez de celestes (piden esto en
+      la consulta original)
+   3) indicadores fuera de la tarjeta, no superpuestos, porque la
+      altura de cada reseña varía */
+
+.carousel-container.reviews-carousel {
+  max-width: 700px;
+  padding: 0 55px;
+}
+
+.reviews-carousel .carousel-slide {
+  align-items: center;
+  padding: 0 4px;
+}
+
+.reviews-carousel .review-card {
+  width: 100%;
+}
+
+/* Sobrescribe SOLO dentro de .reviews-carousel: fondo blanco,
+   borde sutil, ícono SVG con currentColor en vez de <img> invertido */
+.reviews-carousel .carousel-button {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  color: var(--color-text);
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.reviews-carousel .carousel-button:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.reviews-carousel .carousel-button svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  pointer-events: none;
+}
+
+.reviews-carousel .carousel-button-left {
+  left: 0;
+}
+
+.reviews-carousel .carousel-button-right {
+  right: 0;
+}
+
+/* Indicadores del carrousel de reseñas: abajo de la tarjeta,
+   no flotando encima como en el de fotos */
+.reviews-carousel .carousel-indicators {
+  position: static;
+  transform: none;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.reviews-carousel .carousel-indicator {
+  background-color: #d9d9d9;
+}
+
+.reviews-carousel .carousel-indicator.active {
+  background-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-container.reviews-carousel {
+    padding: 0 42px;
+  }
+
+  .reviews-carousel .carousel-button {
+    padding: 6px;
+  }
 }
 
 /* ================= PROPERTIES ================= */
@@ -390,6 +476,7 @@ h5 {
 
 .reviews h3 {
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .review-card {
@@ -397,7 +484,7 @@ h5 {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .stars {
@@ -595,6 +682,7 @@ h5 {
 .cta-section {
   text-align: center;
   margin-bottom: 60px;
+  margin-top: 60px;
 }
 .btn-whatsapp {
   display: inline-block;
